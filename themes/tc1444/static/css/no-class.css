@@ -1,0 +1,600 @@
+/**
+ * Temporary
+ * ----------------------------------------------
+*/
+/* #nav {
+  background-color: lightblue;
+}
+
+#header {
+  background-color: tomato;
+}
+
+#content {
+  background-color: pink;
+}
+
+#aside-left {
+  background-color: brown;
+}
+
+#main {
+  background-color: burlywood;
+}
+
+#aside-right {
+  background-color: cadetblue;
+}
+
+#footer {
+  background-color: lightgreen;
+} */
+
+/* TODO Copy the organizastion patter nof Water.CSS */
+
+
+/**
+ * Variables
+ * ----------------------------------------------
+*/
+:root {
+  /* Fonts */
+    --font-sans-serif-primary: '', sans-serif;
+    --font-serif-primary: '', serif;
+}
+
+html {
+  font-size: 17px;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.5;
+}
+
+
+/**
+ * Headers
+ * ----------------------------------------------
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  box-sizing: content-box;
+  color: black;
+  font-weight: 700;
+  /* font-weight: 800; */
+  line-height: 1.25;
+  max-width: 32rem;
+  padding: 0;
+  margin: 2rem 2rem 0.5rem 2rem;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+margin-top: 0;
+}
+
+h1 {
+font-size: 2.2rem;
+max-width: 100%;
+}
+
+h2 {
+font-size: 1.8rem;
+
+}
+
+h3 {
+  /* padding-top: 1rem; */
+font-size: 1.6rem;
+}
+
+h4 {
+  /* padding-top: 1rem; */
+font-size: 1.475rem;
+}
+
+h5 {
+font-size: 1.25rem;
+/* margin-bottom: 0.25rem; */
+}
+
+h6 {
+font-size: 1.1rem;
+/* margin-bottom: 0.25rem; */
+}
+
+/**
+ * Paragraphs
+ * ----------------------------------------------
+*/
+p {
+  box-sizing: content-box;
+  font-size: 1rem;
+  max-width: 32rem;
+  /* padding: 0 var(--hrs-1); */
+  /* margin: 0 0 1.25rem 0; */
+
+  /* line-height: 1.2; */
+  /* max-width: 30.588235rem; */
+  /* padding: 0 2rem 1.25rem 2rem; */
+  padding: 0;
+  /* margin: 0 0 0.75rem 0; */
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+p.tiny-heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+p.tiny-heading + h2,
+p.tiny-heading + h3 {
+  margin-top: 0;
+}
+
+p.standout-copy {
+  font-size: 1.2rem;
+}
+
+p + ul,
+p + ol {
+
+}
+
+small {
+  font-size: 0.85rem;
+}
+
+hr {
+  margin: 3rem 2rem;
+    border-color: black;
+    max-width: 32rem;
+}
+
+.dev-notice {
+  background-color: black;
+  color: white;
+  padding: 3rem 0;
+  margin: 3rem 0;
+}
+.dev-notice h3 {
+  color: white;
+}
+
+
+/**
+ * Links
+ * ----------------------------------------------
+*/
+a {
+  text-decoration: underline;
+}
+/* NOTE The style was copied from https://alvarotrigo.com/, so you need to break this down and make it your. Also make a themed version of this with primary colors, start with orange. */
+
+a {
+/* text-decoration: none;
+text-shadow: .03em .03em #fff,-.03em .03em #fff,.03em .03em #fff,.03em -.09em #fff,.06em .03em #fff,-.06em .03em #fff,.09em .03em #fff,-.09em .03em #fff,.12em .03em #fff,-.12em -.07em #fff,.15em .03em #fff,-.15em .03em #fff;
+background-image: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient(#ff9f35,#ff9f35);
+background-size: .05em 2px,.05em 2px,4px 2px;
+background-repeat: no-repeat,no-repeat,repeat-x;
+background-position: 0 90%,100% 90%,0 90%;
+color: #000; */
+}
+
+a:hover {
+/* color: #ff9f35;
+text-decoration: none;
+background: none; */
+}
+
+/**
+ * Lists
+ * ----------------------------------------------
+*/
+
+
+details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--background-alt);
+  padding: 10px 10px 0;
+  margin: 1em 0;
+  border-radius: 6px;
+  overflow: hidden;
+
+  max-width: 30rem;
+  margin: 1rem 2rem;
+  padding: 0;
+}
+
+details[open] {
+  max-width: 30rem;
+  margin: 1rem 2rem;
+  padding: 0px;
+}
+
+details > :last-child {
+  margin-bottom: 0;
+}
+
+details[open] summary {
+  /* margin-bottom: 10px; */
+}
+
+summary {
+  display: list-item;
+  background-color: var(--background);
+  padding: 10px;
+  /* margin: -10px -10px 0; */
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+summary:hover,
+summary:focus {
+  text-decoration: underline;
+}
+
+
+
+details > :not(summary) {
+  margin-top: 0;
+}
+
+summary::-webkit-details-marker {
+  color: var(--text-main);
+}
+
+summary.heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* ------????????????? */
+dl {
+  box-sizing: content-box;
+  max-width: 30rem;
+  padding: 0.25rem 2rem 1rem 3.5rem;
+  /* margin: 0 0 2rem 0; */
+  padding: 0 2rem 0 2rem;
+  margin: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  display: inline-block;
+  margin: 0 0 1rem 1rem;
+}
+
+ol,
+ul {
+  box-sizing: border-box;
+  max-width: 30rem;
+  padding: 0.25rem 2rem 1rem 3.5rem;
+  /* margin: 0 0 2rem 0; */
+  margin: 0;
+
+  box-sizing: border-box;
+  max-width: 30rem;
+  /* padding: 0.25rem 2rem 1rem 3.5rem; */
+  /* margin: 0 0 2rem 0; */
+  margin: 0 2rem 1rem 2rem;
+  padding: 0 0 0 1rem;
+}
+
+ol li,
+ul li {
+  /* padding-left: 0.0rem; */
+  margin: 0 0 0.25rem 0;
+}
+
+/**
+ * Forms
+ * ----------------------------------------------
+*/
+.form-newsletter {
+  /* margin: 1rem 2rem 1rem 2rem; */
+  margin: 1.5rem 2rem 1.5rem 2rem;
+  /* padding: 1rem 0rem; */
+
+}
+.form-newsletter-input > iframe {
+  width: 100%;
+  height: 52px;
+  max-width: 32rem;
+}
+.form-newsletter-input + p {
+  /* margin: 0.5rem 0 1rem 0; */
+  /* font-size: 0.9rem; */
+  margin: 0;
+    padding: 0.75rem 0 0 0.25rem;
+    font-size: 0.85rem;
+}
+
+/**
+ * Navigation
+ * ----------------------------------------------
+*/
+#siteNavBurgerContainer {
+
+}
+.site_top_bar_nav {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.brandmark-container {
+  padding: 0 1rem;
+
+}
+.brandmark-container a {
+  /* font-size: 4rem; */
+    font-style: normal;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    
+    text-decoration: none;
+    /* opacity: 0.48; */
+}
+.brandmark-container a:hover {
+  opacity: 1;
+}
+
+/* Menu Icon - Hamburger =================== */
+.burger-container {
+  position: relative;
+  z-index: 7;
+  height: 50px;
+  width: 50px;
+  padding: 0 1rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  /* background-color: pink; */
+  transform: rotate(0deg);
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.burger-container #burger {
+  /* width: 18px; */
+  /* height: 8px; */
+  position: relative;
+  display: block;
+  /* margin: -6px auto 0; */
+  margin: 0 auto 0;
+  /* top: 50%; */
+  top: 38%;
+}
+
+.burger-container #burger .bar {
+  width: 100%;
+  height: 3px;
+  display: block;
+  position: relative;
+  background: rgba(29, 28, 28, 1.0);
+  border-radius: 12px;
+}
+
+.burger-container #burger .bar {
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition-delay: 0s;
+}
+
+.burger-container #burger .bar.topBar {
+  transform: translateY(0px) rotate(0deg);
+}
+
+.burger-container #burger .bar.btmBar {
+  transform: translateY(6px) rotate(0deg);
+}
+
+/* Menu Icon - Hamburger: Menu Open State */
+#globalNavigation.menu-opened .burger-container {
+  transform: rotate(90deg);
+}
+
+#globalNavigation.menu-opened .burger-container #burger .bar {
+  height: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition-delay: 0s;
+}
+
+#globalNavigation.menu-opened .burger-container #burger .bar {
+  transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition-delay: 0.2s;
+}
+
+#globalNavigation.menu-opened .burger-container #burger .bar.topBar {
+  /* transform: translateY(4px) rotate(45deg); */
+  transform: translateY(5px) rotate(45deg);
+}
+
+#globalNavigation.menu-opened .burger-container #burger .bar.btmBar {
+  /* transform: translateY(2px) rotate(-45deg); */
+  transform: translateY(1px) rotate(-45deg);
+}
+
+#globalNavigation.menu-opened .burger-container #burger .bar {
+  /* background-color: #fff; */
+}
+
+
+
+.site_top_bar_nav .hidden_site_top_bar_nav_container,
+.mainMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* width: 100%; */
+  /* height: 100%; */
+  height: 100vh;
+  overflow-y: hidden;
+  z-index: 6;
+  padding: 50px;
+  background-color: rgba(29, 28, 28, 1.0);
+  background-color: white;
+  padding: 50px 2rem;
+  transform: translateY(-100%);
+  transition: transform 1.4s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  opacity: 0;
+/* TODO on menu open have everything in the body fade out to the same color as the mobile menu background when open.You will/may need to change the JS target to the "body" tag */
+}
+
+.mainMenu {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  align-items: end;
+  align-items: center;
+  height: 100%;
+  padding: 4.5rem;
+  margin: 0;
+}
+.mainMenu ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.mainMenu ol li a {
+  font-size: 2.25rem;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+    /* opacity: 0.48; */
+}
+.mainMenu ol li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.site_top_bar_nav .hidden_site_top_bar_nav_container .revealed_local_top_bar_nav_container .nav_menu_item a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* Menu List: Mobile Open State */
+/* .site_top_bar_nav.menu-opened .site_top_bar_nav .menu-mobile, */
+.site_top_bar_nav.menu-opened .hidden_site_top_bar_nav_container, .ueno,
+#globalNavigation.menu-opened .mainMenu {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.20s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+
+ol,
+ul {
+  box-sizing: border-box;
+  max-width: 30rem;
+  padding: 0.25rem 2rem 1rem 3.5rem;
+  /* margin: 0 0 2rem 0; */
+  margin: 0;
+
+  box-sizing: border-box;
+  max-width: 30rem;
+  /* padding: 0.25rem 2rem 1rem 3.5rem; */
+  /* margin: 0 0 2rem 0; */
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 0 0 0 1.5rem;
+}
+
+
+ul.pagination {
+  display: flex;
+    flex-direction: row;
+    /* align-items: stretch; */
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+ul.pagination > li {
+padding: 0.5rem 0.75rem;
+}
+ol.prev-next {
+  display: flex;
+  flex-direction: row;
+  /* align-items: stretch; */
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+ol.prev-next dl {
+  padding: 0;
+  /* padding: 0.5rem 0.75rem; */
+}
+ol.prev-next dl dd {
+  margin: 0 1rem 0 0;
+  
+}
+ol.prev-next .prev-next__next {
+  text-align: right;
+}
+ol.prev-next .prev-next__next dl dd {
+  margin: 0 0 0 1rem;
+}
+
+/**
+ * Layout
+ * ----------------------------------------------
+*/
+/* Add this to the modal https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/#:~:text=style.-,top%20%3D%20''%3B%20window.,and%20when%20it%20is%20closed. */
+
+body {
+  /* background-color: yellow; */
+  /* height: 100vh; */
+  /* overflow-y: hidden; */
+}
+
+body > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  /* Sticky Footer: Keep the row of the sticky element in the 'grid-template-rows' set to auto */
+  min-height: 100%;
+  /* Sticky Footer: 'min-height:100%' ensures the height of the body equals that of the browser while factoring in margins and padding */
+}
+
+body > header {
+  padding-top: 4rem;
+  /* margin: 4rem 0; */
+}
+body > footer {
+  /* margin: 0 0 1rem 0; */
+  padding-bottom: 2rem;
+}
+
+header > section:first-child,
+main > section:first-child {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+footer > section:last-child {
+  margin-bottom: 0rem;
+}
+section {
+  margin: 4rem 0;
+}

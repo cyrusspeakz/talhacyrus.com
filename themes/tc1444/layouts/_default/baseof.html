@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="{{ $.Site.LanguageCode | default " en" }}" dir="ltr">
+
+<head>
+    {{ block "head" . }}
+    {{ partial "head/meta.html" . }}
+    {{ partial "head/title.html" . }}
+    {{ partial "head/favicon.html" . }}
+    {{ partial "head/twitterCard.html" . }}
+    {{ partial "head/analytics.html" . }}
+    {{ partial "head/fonts.html" . }}
+    {{ partial "head/styles.html" . }}
+    {{ end }}
+</head>
+
+<body id="body">
+    <div id="globalNavigation">
+        <nav id="siteTopBarNav" class="site_top_bar_nav">
+
+            <div class="brandmark-container">
+                <a href="/">Talha ibn Cyrus</a>
+                <!-- <a href="/">Talha Cyrus</a> -->
+                <!-- <a href="/">Talha</a> -->
+                </div>
+
+            <div class="mainMenu">    
+            {{ partial "nav/lazy-menu.html" . }}
+            </div>
+
+            <div id="siteNavBurgerContainer" class="burger-container">
+                <div id="burger">
+                <div class="bar topBar"></div>
+                <div class="bar btmBar"></div>
+                </div>
+            </div>
+
+        </nav>
+
+        
+    </div>
+    
+    <header id="header">
+        {{ block "header" . }}
+        {{ end }}
+    </header>
+
+    <div id="content">
+        <aside id="aside-left">
+            {{ block "aside-left" . }}
+            {{ end }}
+        </aside>
+  
+        <main id="main">
+            {{ block "main" . }}
+            {{ end }}
+        </main>
+  
+        <aside id="aside-right">
+            {{ block "aside-right" . }}
+            {{ end }}
+        </aside>
+    </div>
+
+    <footer id="footer">
+        <section>
+            {{ block "footer" . }}
+            {{ end }}
+        </section>
+<!--   
+        <section class="footer-content">
+            
+        </section> -->
+  
+        <section class="legal-stuff">
+            <div class="dev-notice">
+            <h3>{{ emojify ":warning:" }} Development Notice {{ emojify ":warning:" }}</h3>
+            <p>Excuse any glitches you may come across here and there on the site, it's being built in public.</p><p>Any more major glitches or suggestions for content and implorment email me at "hey@talhacyrus.com".</p>
+        </div>
+            <p><small><span>Talha ibn Cyrus © 2023. Alpha {{ .Site.Params.version | markdownify }}</span></small></p>
+        </section>
+    </footer>
+  </div>
+    {{ block "script" . }}
+
+  <script>
+    // When the user clicks the hamburger open or hide the menu.
+(function(){
+    var burger = document.querySelector('#siteNavBurgerContainer'),
+        header = document.querySelector('#globalNavigation');
+
+    burger.onclick = function() {
+        header.classList.toggle('menu-opened');
+    }
+}());
+  </script>
+
+    {{ end }}
+  </body>
+  
+  </html>

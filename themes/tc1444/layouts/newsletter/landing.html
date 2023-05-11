@@ -1,0 +1,35 @@
+{{ define "header" }}
+<section>
+<p class="tiny-heading">{{ .Title }}</p>
+<h2>Survivors to Thrivers</h2>
+<p class="standout-copy">A newsletter for those of you feeling lost, knowing in your heart and mind that there is a better way to live.</p>
+</section>
+{{ end }}
+
+
+
+{{ define "main" }}
+<section>
+{{ .Content }}
+</section>
+
+<section>
+<h3>Latest Issues</h3>
+<p>These are the most recent publications uploaded 1-2 weeks after it's initial release via email.</p>
+<ol>
+{{ $li := where .Site.Pages.ByPublishDate ".Params.type" "==" "newsletter" }}
+{{ $li = where $li ".Params.layout" "==" "issue" }}
+{{ range last 7 $li }}
+<li>  
+  <a href="{{ .RelPermalink }}">{{ .Title }} - {{ .Params.Series }}</a>
+</li>
+{{ end }}
+</ol>
+<p>  
+  {{ $l := where .Pages.ByPublishDate ".Params.type" "==" "newsletter" }}
+  {{ $l = where $l ".Params.layout" "==" "archive" }}
+  {{ range first 1 $l }} 
+    <a href="{{ .RelPermalink }}">View the archive.</a></h2>
+  {{ end }}</p>
+</section> 
+{{ end }}

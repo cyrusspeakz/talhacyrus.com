@@ -1,0 +1,34 @@
+{{ define "header" }}
+<section>
+<p class="tiny-heading">{{ .Title }}</p>
+<h2>Logs of Sovereignty</h2>
+<p class="standout-copy">Each issue a letter of motivation, a lesson for the community, or the reflections from me, Talha.</p>
+</section>
+{{ end }}
+
+
+
+{{ define "main" }}
+<section>
+{{ .Content }}
+</section>
+
+<section>
+<h3>The Archive</h3>
+<p>Take your time and browse the archive, take what you find beneficial and leave what you do not.</p>
+<ol>
+    {{ $paginator := .Paginate (.Pages.ByPublishDate.Reverse ) 28 }}
+    {{ range $paginator.Pages.ByPublishDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }} - {{ .Params.Series }}</a>
+    </li>
+    {{ end }}
+</ol>
+</section>
+{{ end }}
+
+
+
+{{ define "footer" }}
+{{ partial "nav/pagination.html" . }}
+{{ end }}

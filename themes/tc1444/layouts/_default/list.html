@@ -1,0 +1,46 @@
+{{ define "header" }}
+<section>
+<p class="tiny-heading">{{ .Type }}</p>
+<h2>{{ .Title }}</h2>
+<p class="standout-copy">{{ .Params.Summary | markdownify}}</p>
+</section>
+{{ end }}
+
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+{{ range .Pages.ByPublishDate.Reverse }}
+<article>
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+</article>
+<article>
+    <h2><a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a></h2>
+    {{ .Summary | truncate 120 }}
+</article>
+<p>
+    <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <br>
+    
+</p>
+{{ .Render "li"}}
+{{ end }}
+
+{{ end }}
+
+{{ define "footer" }}
+<hr>
+
+<h3>Paginated Blog Posts</h3>
+<ol>
+    {{ $paginator := .Paginate (.Pages.ByPublishDate.Reverse) 2 }}
+    {{ range $paginator.Pages.ByPublishDate.Reverse }}
+    <li>
+        {{ .Render "li" }}
+    </li>
+    {{ end }}
+</ol>
+
+{{ template "_internal/pagination.html" . }}
+    {{ partial "nav/pagination.html" . }}
+{{ end }}

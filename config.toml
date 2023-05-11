@@ -1,0 +1,21 @@
+# hugo server --bind 0.0.0.0 --baseURL http://192.168.0.16:1313
+
+# Declares what theme to use. Be sure to comment out if you are not using a theme or you will get an error. // Name of the Hugo theme you want to activate, if blank comment it out or it will error the build
+theme = "tc1444"
+# themesDir = "/"
+
+baseURL = 'https://talhacyrus.com/'
+languageCode = 'en-us'
+title = 'Talha ibn Cyrus'
+
+sectionPagesMenu = "lazyBloggerMenu"
+
+paginate = 6
+
+enableEmoji = true
+
+[params]
+defaultAuthor = "Talha ibn Cyrus"
+buildVersion = "v0.0.0"
+  [params.socials]
+  youtubeLink = "https://youtube.com"

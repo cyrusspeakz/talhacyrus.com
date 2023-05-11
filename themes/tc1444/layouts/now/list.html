@@ -1,0 +1,35 @@
+{{ define "header" }}
+<section>
+<p class="tiny-heading">{{ .Type }}</p>
+<h2>{{ .Title }}</h2>
+<p class="standout-copy">{{ .Params.Summary | markdownify}}</p>
+<p>BTW, this is a <a target="_blank" href="https://nownownow.com/about">now page</a>, and if you're a creator like me and have your own site, <a target="_blank" href="https://nownownow.com/about">consider making one</a>, too.</p>
+<p><strong>Updated: </strong>{{ range last 1 .Pages.ByPublishDate.Reverse }}{{ .Date }}{{ end }}, from my an undisclosed location on planet earth.</p>
+</section>
+{{ end }}
+
+{{ define "main" }}
+<section>
+    {{ range last 1 .Pages.ByPublishDate.Reverse }}
+    {{ .Content }}
+    {{ end }}
+  </ol>
+</section>
+
+{{/*
+<section>
+<h3>Past Entries</h3>
+<!-- Consider making an archive link instead of showing the list. -->
+<p>Snooping around huh. Want to know where I been, what I've done?</p>
+<p>I have made that easy for you, have fun.</p>
+
+<ol>
+  {{ range .Pages.ByPublishDate.Reverse }}
+  <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ol>
+</section>
+*/}}
+{{ end }}

@@ -1,0 +1,11 @@
+<!-- <nav> -->
+  <ol>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.lazyBloggerMenu }}
+    <li>
+      <a class="{{if or ($currentPage.IsMenuCurrent " lazyBloggerMenu" .) ($currentPage.HasMenuCurrent "lazyBloggerMenu" .) }}
+        active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ol>
+<!-- </nav> -->

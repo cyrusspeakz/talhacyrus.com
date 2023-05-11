@@ -1,0 +1,15 @@
+{{ define "header" }}
+<section>
+<p class="tiny-heading">{{ .Type }}</p>
+<h2>{{ .Title }}</h2>
+<p class="standout-copy"><b>I'm Talha — Artist. Writer. Influencer.</b></br>The unfiltered voice of a Muslim man exemplifying holistic masculinity while on the voyage towards sovereignty.</p>
+</section>
+{{ end }}
+
+{{ define "main" }}
+{{ .Content }}
+{{ end }}
+
+{{ define "footer" }}
+{{ partial "nav/prev-next" . }}
+{{ end }}

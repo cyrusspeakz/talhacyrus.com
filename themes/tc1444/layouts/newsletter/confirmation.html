@@ -1,0 +1,28 @@
+{{ define "header" }}
+<section>
+  <p class="tiny-heading">Signup Confirmation</p>
+  <h2>Amongst the Best</h2>
+  <p class="standout-copy">The best newsletter for survivors, life's voyagers, the one's who make decisions instead of choices.</p>
+</section>
+{{ end }}
+
+{{ define "main"}}
+<p>Welcome, you are now apart of Talha’s clan. Be on the lookout for your initiation package. I am honoured to have you here and am looking forward to what we will create together.</p>
+<p>Check your email, then get yourself caught up by  
+  {{ $arc := where .Site.Pages.ByPublishDate ".Params.type" "==" "newsletter" }}{{ $arc = where $arc ".Params.layout" "==" "archive" }}{{ range $arc }}<a href="{{ .RelPermalink }}">reading the previous issues</a>{{ end }} after you have completed your initiation package.</p>
+
+<p>Alternatively you can <a onclick="history.back()">click here to return</a> to the content you were consuming.</p>
+
+<h3>Bonus Points</h3>
+<p>Your phone is already in your hsnd so do the right thing by...</p>
+<ul>
+  <li>watching my <a target="_blank" href="https://www.youtube.com/@talhacyrus">progress reports on YouTube</a></li>
+  <li>being a guest on my <a target="_blank" href="https://www.tiktok.com/@talhacyrus?_t=8cCQQP15hbS&_r=1">weekly TikTok discussions</a></li>
+  <li>viewing my artwork in progress <a target="_blank" href="https://instagram.com/talhacyrus?igshid=NTc4MTIwNjQ2YQ==">on Instagram</a></li>
+  <li>witnessing and engaging with me as <a target="_blank" href="https://twitter.com/talhacyrus">learn Twitter</a></li>
+  <li>and using my art reference boards on <a target="_blank" href="https://www.pinterest.com/@talhacyrus">Pinterest</a></li>
+</ul>
+<p>And for those you of who are seekers of knowledge I have a digital garden for you to explore. Ideas, essays, articles, a growing network of my thoughts made public in text and images.</p>
+<p>Again, follow me on the socials and say, "Hi", I'm friendly!</p>
+{{ end }}
+
