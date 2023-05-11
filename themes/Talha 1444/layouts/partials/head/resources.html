@@ -4,22 +4,12 @@
 {{- end }}
 
 {{ range .Site.Params.customjs }}
-    <script type="text/javascript" src="{{ . | absURL }}"></script>
+    <script type="text/javascript" src="{{ . | relURL }}"></script>
 {{- end }}
 
 {{ range $elem := .Site.Params.customjscssraw }}
     {{ $elem | safeHTML }}
 {{- end }}
-
-
-
-
-
-{{ $css_layout := "css/layout.css" | absURL }}
-<link rel="stylesheet" href="{{ $css_layout }}" />
-
-
-<link rel="stylesheet" href="/css/xx.css" />
 
 
 
