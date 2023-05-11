@@ -1,0 +1,43 @@
+# hugo server --bind 0.0.0.0 --baseURL http://192.168.0.16:1313
+
+# Declares what theme to use. Be sure to comment out if you are not using a theme or you will get an error. // Name of the Hugo theme you want to activate, if blank comment it out or it will error the build
+theme: tc1444
+themesDir: themes
+
+baseURL: https://talhacyrus.com/
+languageCode: en-us
+title: Talha ibn Cyrus
+
+sectionPagesMenu: lazyBloggerMenu
+
+paginate: 6
+
+enableEmoji: true
+
+
+
+params:
+  customcss:
+    - css/modern-normalize.css
+    - css/tailwind-reset.css
+    - css/no-class.css
+    - css/layout.css
+  customjs:
+    - js/xx.js
+  customjscssraw:
+    - "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css' integrity='sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=' crossorigin='anonymous'>"
+    - >
+      <script async src='https://www.googletagmanager.com/gtag/js?id=G-XXX'></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXX');
+      </script>
+    
+
+  defaultAuthor: Talha ibn Cyrus
+
+  params.socials:
+    - youtubeLink: https://youtube.com

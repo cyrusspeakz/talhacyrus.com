@@ -1,17 +1,59 @@
-{{ $css_normalize := "/css/modern-normalize.css" | absURL }}
+<!-- // css
+{{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+
+// javascript
+{{ range .Site.Params.custom_js -}}
+    <script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }} -->
+
+
+
+
+
+
+
+
+
+
+{{ range .Site.Params.customcss }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{- end }}
+
+{{ range .Site.Params.customjs }}
+    <script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}
+
+{{ range $elem := .Site.Params.customjscssraw }}
+    {{ $elem | safeHTML }}
+{{- end }}
+
+
+
+
+
+
+
+
+
+<!-- {{ $css_normalize := "/css/modern-normalize.css" | absURL }}
 <link rel="stylesheet" href="{{ $css_normalize }}" />
 
 {{ $css_reset := "/css/tailwind-reset.css" | absURL }}
 <link rel="stylesheet" href="{{ $css_reset }}" />
 
 {{ $css_noclass := "/css/no-class.css" | absURL }}
-<link rel="stylesheet" href="{{ $css_noclass }}" />
+<link rel="stylesheet" href="{{ $css_noclass }}" /> -->
+
+
+
 
 <!-- {{ $css_typography := "/css/typography.css" | absURL }}
 <link rel="stylesheet" href="{{ $css_typography }}" /> -->
 
-{{ $css_layout := "/css/layout.css" | absURL }}
-<link rel="stylesheet" href="{{ $css_layout }}" />
+<!-- {{ $css_layout := "/css/layout.css" | absURL }}
+<link rel="stylesheet" href="{{ $css_layout }}" /> -->
 
 
 
