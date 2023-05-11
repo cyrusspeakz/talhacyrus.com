@@ -7,11 +7,8 @@ themesDir: themes
 baseURL: https://talhacyrus.com/
 languageCode: en-us
 title: Talha ibn Cyrus
-
-# sectionPagesMenu: 'lazyBloggerMenu'
-
+sectionPagesMenu: lazyBloggerMenu
 paginate: 6
-
 enableEmoji: true
 
 
