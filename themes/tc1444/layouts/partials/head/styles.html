@@ -1,21 +1,3 @@
-<!-- // css
-{{ range .Site.Params.custom_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-{{- end }}
-
-// javascript
-{{ range .Site.Params.custom_js -}}
-    <script type="text/javascript" src="{{ . | absURL }}"></script>
-{{- end }} -->
-
-
-
-
-
-
-
-
-
 
 {{ range .Site.Params.customcss }}
     <link rel="stylesheet" href="{{ . | absURL }}">
@@ -33,7 +15,11 @@
 
 
 
+{{ $css_layout := "css/layout.css" | absURL }}
+<link rel="stylesheet" href="{{ $css_layout }}" />
 
+
+<link rel="stylesheet" href="/css/xx.css" />
 
 
 
@@ -52,8 +38,7 @@
 <!-- {{ $css_typography := "/css/typography.css" | absURL }}
 <link rel="stylesheet" href="{{ $css_typography }}" /> -->
 
-<!-- {{ $css_layout := "/css/layout.css" | absURL }}
-<link rel="stylesheet" href="{{ $css_layout }}" /> -->
+
 
 
 
@@ -64,7 +49,7 @@
 <link rel="stylesheet" href="/css/typography.css" />
 <link rel="stylesheet" href="/css/links_bttns.css" />
 
-<link rel="stylesheet" href="/css/layout.css" />
+
 
 
 <link rel="stylesheet" href="/css/image.css" />
