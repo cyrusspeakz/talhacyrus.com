@@ -17,7 +17,7 @@ params:
   customcss:
     - css/modern-normalize.css
     - css/tailwind-reset.css
-    - css/no-class.css
+    - /css/no-class.css
     # - css/layout.css
   customjs:
     - js/xx.js

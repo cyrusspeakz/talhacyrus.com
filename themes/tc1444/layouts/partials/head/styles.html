@@ -1,6 +1,6 @@
 
 {{ range .Site.Params.customcss }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    <link rel="stylesheet" href="{{ . | relURL }}">
 {{- end }}
 
 {{ range .Site.Params.customjs }}
